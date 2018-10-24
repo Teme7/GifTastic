@@ -1,11 +1,12 @@
 /*
 
 var api = "http://api.giphy.com/v1/gifs/search?";
-var myKey = "&api_key=n9a5thnIoFWScPFoQG5PFcT3ry5sadEG"
-var query = "&q=soccer"
+var myKey = "&api_key=n9a5thnIoFWScPFoQG5PFcT3ry5sadEG";
+var query = "&q=soccer";
+
 */
 
-var gifArray = ["Soccer", "Movies", "Pandas", "Funny Pets", "Looping GIFs", "Trippy", "Soothing", "Eden Hazard", "Lionel Messi"];
+var gifArray = ["Soccer", "Funny Pets", "Looping GIFs", "Trippy", "Soothing", "Eden Hazard", "Lionel Messi", "Movies", "Pandas", "Bloopers"];
 var currentGif; 
 var pausedGif; 
 var animatedGif; 
@@ -43,7 +44,7 @@ function Display(){
             if(rating == ''){
                 rating = 'Unrated';
             }
-            var rating = $('<h5>').html('Rated: '+ rating).addClass('ratingStyle');
+            var rating = $('<h3>').html('Rated: '+ rating).addClass('ratingStyle');
             
             // $('.display').append(gifDisplay);
             $('.display').append(rating, gifDisplay);
@@ -55,18 +56,17 @@ function Display(){
 //to toggle images.
 function gifAnimate(){
 
-       var state = $(this).attr("data-state");
-       var animatedGif= $(this).attr("data-animate");
-       var pausedGif = $(this).attr("data-still");
-  
-      if (state === "still") {
+    var state = $(this).attr("data-state");
+    var animatedGif= $(this).attr("data-animate");
+    var pausedGif = $(this).attr("data-still");
+
+    if (state === "still") {
         $(this).attr("src", animatedGif);
         $(this).attr("data-state", "animate");
-      } else {
+    } else {
         $(this).attr("src", pausedGif);
         $(this).attr("data-state", "still");
-      }
-
+    }
 }
 
 createButtons();
@@ -82,7 +82,7 @@ $("#addGif").on("click", function (event) {
         return;
        }
 
-    // Add the new search term to the array
+    // Add the new  query to the array
     gifArray.push(item);
 
     createButtons();
@@ -93,3 +93,5 @@ $("#addGif").on("click", function (event) {
  
   $(document).on("click", ".gifButton", Display);
   $(document).on("click", "img", gifAnimate);
+
+//   Just can't figure out why the api calls get no response :(
