@@ -1,3 +1,10 @@
+/*
+
+var api = "http://api.giphy.com/v1/gifs/search?";
+var myKey = "&api_key=n9a5thnIoFWScPFoQG5PFcT3ry5sadEG"
+var query = "&q=soccer"
+*/
+
 var gifArray = ["Soccer", "Movies", "Pandas", "Funny Pets", "Looping GIFs", "Trippy", "Soothing", "Eden Hazard", "Lionel Messi"];
 var currentGif; 
 var pausedGif; 
