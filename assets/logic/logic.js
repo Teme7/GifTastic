@@ -2,7 +2,7 @@ var gifArray = ["Soccer", "Movies", "Pandas", "Funny Pets", "Looping GIFs", "Tri
 var currentGif; 
 var pausedGif; 
 var animatedGif; 
-var stillGif;
+var staticGif;
 
 // creates buttons
 function createButtons(){
