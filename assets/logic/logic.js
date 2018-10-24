@@ -17,7 +17,7 @@ function Display(){
     $('.display').empty();
 
     var gif = $(this).data('name');
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&limit=10&api_key=cJpVt3udm4XbbUi5Z68cHZRKT2jX6QOJ";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&limit=10&api_key=n9a5thnIoFWScPFoQG5PFcT3ry5sadEG";
     $.ajax({
         url: queryURL, 
         method: 'GET'
@@ -75,7 +75,7 @@ $("#addGif").on("click", function (event) {
         return;
        }
 
-    // Add the new search term to the foods array
+    // Add the new search term to the array
     gifArray.push(item);
 
     createButtons();
